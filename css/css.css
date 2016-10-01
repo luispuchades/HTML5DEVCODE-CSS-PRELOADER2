@@ -1,0 +1,232 @@
+@charset "UTF-8";
+/*CSS Document*/
+
+/*************************/
+/* START UNIVERSAL RESET */
+/*************************/
+
+* {
+  border: 0;
+  /*Con box-sizing conseguimos que el padding lo meta dentro de la caja. Evita que las cajas engorden.*/
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ol {
+  padding-left: 1.4em;
+  list-style: decimal;
+}
+
+ul {
+  padding-left: 1.4em;
+  list-style: square;
+}
+
+q:before, q:after{
+  content:'';
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th, caption {
+  font-weight: normal;
+  text-align: left;
+}
+
+/*********************/
+/*END UNIVERSAL RESET*/
+/*********************/
+
+body {
+/*    background: yellow;*/
+    text-align: center;
+/*    max-width: 60%;*/
+/*    width: 60%;*/
+}
+
+header {
+/*    background: red;*/
+    margin-top: 1em;
+    text-align: center;
+}
+
+#header-link {
+    background: #0a0278;
+    border: 5px solid #0a0278;
+    border-radius: 1em;
+    box-shadow: .3em .3em .5em rgba(122,130,26,.7);
+    color: white;   /* #4f0 Verde */
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 80px;
+    min-height: 80px;
+    min-width: 240px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+}
+
+#header-link h1 {
+/*    background: magenta;*/
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 3em;
+    font-weight: bolder;
+    max-height: 70px;
+    min-height: 70px;
+    margin: auto;
+    position: relative;
+    text-shadow: .2em .2em .5em rgba(122,130,26,.7);
+    text-decoration: none;
+    vertical-align: middle;
+    padding-top: .2em;
+}
+
+#header-link:hover {
+    background: #ffffff;
+    border: 5px solid #0a0278;
+    color: #0a0278;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+#header-link h1:link, #header-link h1:visited, #header-link h1:active {
+    color: white;  /* #4f0 Verde */
+    text-decoration: none;
+}
+
+#titulo-ejercicio {
+    border-top: 5px solid #0a0278;
+    border-bottom: 5px solid #0a0278;
+    border-radius: .2em;
+    font-family: sans-serif;
+    font-size: 2.6em;
+    font-weight: bolder;
+    margin: auto;
+    margin-top: 0.2em;
+    max-width: 100%;
+    min-width: 240px;
+    padding: .1em;
+}
+
+#zona-contenedor {
+/*    background: green;*/
+    border: 5px solid #0a0278;
+    border-radius: 1em;
+    margin: auto;
+    margin-top: 2em;
+    max-width: 100%;
+    min-height: 400px;
+    min-width: 240px;
+    position: static;
+    text-align: center;
+}
+
+.preloader {
+/*    background: red;*/
+    border: 10px solid #0a0278;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+/* Inicio Centrado absoluto*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+/* Fin Centrado Absoluto */
+/*    border-top: 10px solid #4f0; */
+    border-bottom: 10px solid #4f0;
+/* Animación para conseguir rotación  */
+    animation: girar 3s infinite linear;
+}
+
+@keyframes girar {
+
+    from {
+      transform:  rotate(0deg) scale(1,1);
+    }
+    50% {
+      transform:  rotate(360deg) scale(2,2);
+    }
+    to {
+      transform:  rotate(720deg) scale(1,1);
+    }
+}
+
+
+/********************************/
+/* START UNIVERSAL @media-query */
+/********************************/
+
+@media screen and (max-width: 599px) {
+    #header-link, #titulo-ejercicio {
+        display: inline-block;
+        text-align: center;
+        width: 240px;
+    }
+    #zona-contenedor {
+        width: 240px;
+    }
+    #zona-datos {
+        width: 66%
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #header-link, #titulo-ejercicio, #zona-contenedor {
+        display: inline-block;
+        text-align: center;
+        width: 96%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #header-link, #titulo-ejercicio, #zona-contenedor {
+        display: inline-block;
+        text-align: center;
+        width: 85%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #header-link, #titulo-ejercicio, #zona-contenedor {
+        display: inline-block;
+        max-width: 840px;
+        text-align: center;
+        width: 75;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #header-link, #titulo-ejercicio, #zona-contenedor {
+        display: inline-block;
+        max-width: 910px;
+        text-align: center;
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #header-link, #titulo-ejercicio, #zona-contenedor {
+        display: inline-block;
+        max-width: 910px;
+        text-align: center;
+        width: 65%;
+    }
+}
+
+/********************************/
+/* END UNIVERSAL   @media-query */
+/********************************/
